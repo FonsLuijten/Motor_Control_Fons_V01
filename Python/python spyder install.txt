@@ -1,0 +1,5 @@
+1. Install python, https://www.python.org/downloads/
+2. In command window run: pip install spyder
+3. Run Spyder (C:\Users\XXX\AppData\Local\Programs\Python\PythonXXX\Scripts\spyder.exe)
+4. Install arduino 1.8.19, https://www.arduino.cc/
+5. Install teensyduino, https://www.pjrc.com/teensy/td_download.html

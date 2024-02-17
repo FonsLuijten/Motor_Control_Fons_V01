@@ -1,0 +1,32 @@
+ContSelect = ser_in.uint;
+      if ( ContSelect == 1) {
+        Kp_PC1 = 0;
+        fBW = 50.0;
+        alpha1 = 3.0;
+        alpha2 = 4.0;
+        fInt = fBW / 6.0;
+        fLP = fBW * 6.0;
+        integrator_PC1 = new Integrator( fInt , 1 / T);
+        leadlag_PC1    = new LeadLag( fBW , alpha1 , alpha2 , 1 / T);
+        lowpass_PC1    = new Biquad( bq_type_lowpass , fLP , 0.7, 1 / T);
+      }
+      if ( ContSelect == 3) {
+        Kp_PC1 = 0;
+        fBW = 30;
+        alpha1 = 3.0;
+        alpha2 = 4.0;
+        fInt = fBW / 6.0;
+        fLP = fBW * 6.0;
+        integrator_PC1 = new Integrator( fInt , 1 / T);
+        leadlag_PC1    = new LeadLag( fBW , alpha1 , alpha2 , 1 / T);
+        lowpass_PC1    = new Biquad( bq_type_lowpass , fLP , 0.7, 1 / T);
+        Kp_PC2 = 0;
+        fBW = 0.1;
+        alpha1 = 3.0;
+        alpha2 = 4.0;
+        fInt = fBW / 6.0;
+        fLP = fBW * 6.0;
+        integrator_PC2 = new Integrator( fInt , 1 / T);
+        leadlag_PC2    = new LeadLag( fBW , alpha1 , alpha2 , 1 / T);
+        lowpass_PC2    = new Biquad( bq_type_lowpass , fLP , 0.7, 1 / T);
+      }
